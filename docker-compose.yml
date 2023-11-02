@@ -1,0 +1,40 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ./ScaniaTest.Frontend
+    ports:
+      - "4200:80"
+  scaniatestapi:
+    build:
+      context: .
+      dockerfile: Dockerfile.Api
+    ports:
+      - "7243:80"
+      - "5037:443"
+  scaniatestcustomers:
+    build:
+      context: .
+      dockerfile: Dockerfile.Customers
+    ports:
+      - "7185:80"
+      - "5125:443"
+  scaniatestsimulator:
+    build:
+      context: .
+      dockerfile: Dockerfile.Simulator
+    ports:
+      - "7062:80"
+      - "5170:443"
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+
+volumes:
+  rabbitmqdata:

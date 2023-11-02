@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Api", "ScaniaTest.Api\ScaniaTest.Api.csproj", "{E927EC20-F6DE-44E3-A395-0F801FEAC63D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Common", "ScaniaTest.Common\ScaniaTest.Common.csproj", "{FE52A107-64D6-4527-A7D8-3274F266A54D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScaniaTest.Infra", "ScaniaTest.Infra", "{E325BB8B-7840-4C66-885E-10820CDD198D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile.Api = Dockerfile.Api
+		Dockerfile.Customers = Dockerfile.Customers
+		Dockerfile.Simulator = Dockerfile.Simulator
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Customers", "ScaniaTest.Customers\ScaniaTest.Customers.csproj", "{088971AE-9A94-447E-B257-29794A23F935}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Simulator", "ScaniaTest.Simulator\ScaniaTest.Simulator.csproj", "{1D27877C-A98A-4268-80BB-9885300FB568}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Tests", "ScaniaTest.Tests\ScaniaTest.Tests.csproj", "{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E927EC20-F6DE-44E3-A395-0F801FEAC63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E927EC20-F6DE-44E3-A395-0F801FEAC63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E927EC20-F6DE-44E3-A395-0F801FEAC63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E927EC20-F6DE-44E3-A395-0F801FEAC63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE52A107-64D6-4527-A7D8-3274F266A54D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE52A107-64D6-4527-A7D8-3274F266A54D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE52A107-64D6-4527-A7D8-3274F266A54D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE52A107-64D6-4527-A7D8-3274F266A54D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088971AE-9A94-447E-B257-29794A23F935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088971AE-9A94-447E-B257-29794A23F935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088971AE-9A94-447E-B257-29794A23F935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088971AE-9A94-447E-B257-29794A23F935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D27877C-A98A-4268-80BB-9885300FB568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D27877C-A98A-4268-80BB-9885300FB568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D27877C-A98A-4268-80BB-9885300FB568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D27877C-A98A-4268-80BB-9885300FB568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82EF3DB5-14C5-4C6A-8D77-D1E52F704B88}
+	EndGlobalSection
+EndGlobal

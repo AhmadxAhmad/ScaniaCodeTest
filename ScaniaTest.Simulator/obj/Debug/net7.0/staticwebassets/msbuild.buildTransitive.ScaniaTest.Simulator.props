@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ScaniaTest.Simulator.props" />
+</Project>

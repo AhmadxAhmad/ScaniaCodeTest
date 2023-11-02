@@ -1,0 +1,54 @@
+<div class="form-group">
+    <button class="btn btn-success m-2" (click)="randomize()" >Randomize</button>
+</div>
+
+<div class="container flexx" >
+    <h6>Filter By:</h6>
+    <div>
+     <button  (click)=" GetAll()" class="btn btn-link">All Vehicles</button>
+     <button  (click)="GetAllWithStatus(true)" class="btn btn-link">Connected</button>
+     <button (click)="GetAllWithStatus(false)" class="btn btn-link">Not Connected</button>
+        
+    </div>
+
+    <form (ngSubmit)="GetByCustomerId()" #myForm="ngForm">
+        <div class="flexx" style="gap: 10px;">
+          <label for="id">Customer:</label>
+          <input type="number" id="id" name="id" [(ngModel)]="formData.id" class="form-control" required>
+        <button type="submit" class="btn btn-primary">Find</button>
+
+        </div>
+      </form>
+</div>
+
+
+
+<div class="container">
+    <h1>Vehicles</h1>
+    <table class="table table-bordered" *ngIf="vehicles; else noVehicles">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Reg Number</th>
+          <th>Status</th>
+          <th>Customer Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let vehicle of vehicles">
+          <td>{{ vehicle.id }}</td>
+          <td>{{ vehicle.regNr }}</td>
+          <td [ngClass]="{'text-success': vehicle.status, 'text-danger': !vehicle.status}">
+            {{ vehicle.status ? 'Connected' : 'No connection' }}
+          </td>
+          <td>{{ vehicle.customerName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <ng-template #noVehicles>
+    No vehicles found.
+  </ng-template>

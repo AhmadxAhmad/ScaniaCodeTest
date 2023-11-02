@@ -1,0 +1,20 @@
+<div class="containerX">
+    <h1>Customers</h1>
+    <details *ngFor="let customer of customers" >
+        <summary>
+          <span> {{ customer.name }} </span>
+            <p style="font-size: 12px;">{{ customer.address }}</p>
+          </summary>
+        <ul *ngFor="let vehicle of customer.vehicles">
+            <li >
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <span>{{vehicle.regNr}}</span>
+                <p [ngClass]="{'text-success': vehicle.status, 'text-danger': !vehicle.status}">  {{ vehicle.status ? 'Connected' : 'No connection' }} </p>
+                
+  
+            </div>
+            </li>
+        </ul>
+    </details>
+</div>

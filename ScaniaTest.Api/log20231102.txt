@@ -1,0 +1,320 @@
+2023-11-02 15:50:21.652 +01:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-11-02 15:50:21.787 +01:00 [DBG] Hosting starting
+2023-11-02 15:50:21.849 +01:00 [INF] User profile is available. Using 'C:\Users\a.ahmad\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-11-02 15:50:22.137 +01:00 [INF] Configured endpoint scania-test.api-status-update-consume, Consumer: ScaniaTest.Api.Consumers.StatusUpdateConsume
+2023-11-02 15:50:22.264 +01:00 [DBG] Reading data from file 'C:\Users\a.ahmad\AppData\Local\ASP.NET\DataProtection-Keys\key-974a0a42-54c5-4dec-befd-1f05ab1434ec.xml'.
+2023-11-02 15:50:22.291 +01:00 [DBG] Found key {974a0a42-54c5-4dec-befd-1f05ab1434ec}.
+2023-11-02 15:50:22.309 +01:00 [DBG] Considering key {974a0a42-54c5-4dec-befd-1f05ab1434ec} with expiration date 2023-12-07 08:46:40Z as default key.
+2023-11-02 15:50:22.313 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-02 15:50:22.317 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2023-11-02 15:50:22.320 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2023-11-02 15:50:22.325 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2023-11-02 15:50:22.328 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2023-11-02 15:50:22.331 +01:00 [DBG] Using key {974a0a42-54c5-4dec-befd-1f05ab1434ec} as the default key.
+2023-11-02 15:50:22.333 +01:00 [DBG] Key ring with default key {974a0a42-54c5-4dec-befd-1f05ab1434ec} was loaded during application startup.
+2023-11-02 15:50:22.336 +01:00 [DBG] Starting bus instances: IBus
+2023-11-02 15:50:22.342 +01:00 [DBG] Starting bus: "rabbitmq://localhost/"
+2023-11-02 15:50:22.413 +01:00 [DBG] Connect: guest@localhost:5672/
+2023-11-02 15:50:22.577 +01:00 [INF] Now listening on: http://localhost:5037
+2023-11-02 15:50:22.579 +01:00 [DBG] Loaded hosting startup assembly ScaniaTest.Api
+2023-11-02 15:50:22.580 +01:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-11-02 15:50:22.581 +01:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-11-02 15:50:22.583 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-02 15:50:22.594 +01:00 [INF] Hosting environment: Development
+2023-11-02 15:50:22.595 +01:00 [INF] Content root path: C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\ScaniaTest.Api
+2023-11-02 15:50:22.597 +01:00 [DBG] Hosting started
+2023-11-02 15:50:22.650 +01:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.IO.IOException: connection.start was never received, likely due to a network timeout
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.ProtocolBase.CreateConnection(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 86
+2023-11-02 15:50:22.770 +01:00 [DBG] Endpoint Faulted: "rabbitmq://localhost/scania-test.api-status-update-consume"
+MassTransit.RabbitMqConnectionException: Broker unreachable: guest@localhost:5672/
+ ---> RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.IO.IOException: connection.start was never received, likely due to a network timeout
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.ProtocolBase.CreateConnection(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 86
+   --- End of inner exception stack trace ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 112
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateSharedConnection(Task`1 context, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 58
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 51
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.SupervisorExtensions.<>c__DisplayClass5_0`2.<<CreateAgent>g__HandleSupervisorTask|0>d.MoveNext() in /_/src/MassTransit/SupervisorExtensions.cs:line 139
+--- End of stack trace from previous location ---
+   at MassTransit.SupervisorExtensions.CreateAgent[T,TAgent](ISupervisor`1 supervisor, IAsyncPipeContextAgent`1 asyncContext, Func`3 agentFactory, CancellationToken cancellationToken)
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 195
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.RabbitMqTransport.ModelContextFactory.CreateSharedModel(Task`1 context, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ModelContextFactory.cs:line 50
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 51
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.Transports.TransportStartExtensions.OnTransportStartup[T](ReceiveEndpointContext context, ITransportSupervisor`1 supervisor, CancellationToken cancellationToken) in /_/src/MassTransit/Transports/TransportStartExtensions.cs:line 19
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 192
+2023-11-02 15:50:22.770 +01:00 [DBG] Endpoint Faulted: "rabbitmq://localhost/SELI147360_ScaniaTestApi_bus_tb9yyyb7znsbw4p7bdp7zcakb9?temporary=true"
+MassTransit.RabbitMqConnectionException: Broker unreachable: guest@localhost:5672/
+ ---> RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.IO.IOException: connection.start was never received, likely due to a network timeout
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.ProtocolBase.CreateConnection(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 86
+   --- End of inner exception stack trace ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 112
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateSharedConnection(Task`1 context, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 58
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 51
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.SupervisorExtensions.<>c__DisplayClass5_0`2.<<CreateAgent>g__HandleSupervisorTask|0>d.MoveNext() in /_/src/MassTransit/SupervisorExtensions.cs:line 139
+--- End of stack trace from previous location ---
+   at MassTransit.SupervisorExtensions.CreateAgent[T,TAgent](ISupervisor`1 supervisor, IAsyncPipeContextAgent`1 asyncContext, Func`3 agentFactory, CancellationToken cancellationToken)
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 195
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.Internals.TaskExtensions.<>c__DisplayClass2_0`1.<<OrCanceled>g__WaitAsync|0>d.MoveNext() in /_/src/MassTransit.Abstractions/Internals/Extensions/TaskExtensions.cs:line 72
+--- End of stack trace from previous location ---
+   at MassTransit.RabbitMqTransport.ModelContextFactory.CreateSharedModel(Task`1 context, CancellationToken cancellationToken) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ModelContextFactory.cs:line 50
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 51
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 61
+   at MassTransit.Agents.PipeContextSupervisor`1.Send(IPipe`1 pipe, CancellationToken cancellationToken) in /_/src/MassTransit/Agents/PipeContextSupervisor.cs:line 67
+   at MassTransit.Transports.TransportStartExtensions.OnTransportStartup[T](ReceiveEndpointContext context, ITransportSupervisor`1 supervisor, CancellationToken cancellationToken) in /_/src/MassTransit/Transports/TransportStartExtensions.cs:line 19
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 192
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.RunTransport() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 200
+   at MassTransit.Transports.ReceiveTransport`1.ReceiveTransportAgent.Run() in /_/src/MassTransit/Transports/ReceiveTransport.cs:line 128
+2023-11-02 15:50:23.789 +01:00 [DBG] Connection id "0HMURMC5KE1TR" accepted.
+2023-11-02 15:50:23.794 +01:00 [DBG] Connection id "0HMURMC5KE1TR" started.
+2023-11-02 15:50:23.870 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger - -
+2023-11-02 15:50:23.904 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-11-02 15:50:23.934 +01:00 [DBG] No candidates found for the request path '/swagger'
+2023-11-02 15:50:23.937 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.045 +01:00 [DBG] Connection id "0HMURMC5KE1TR" completed keep alive response.
+2023-11-02 15:50:24.049 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger - - - 301 0 - 182.4008ms
+2023-11-02 15:50:24.054 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/index.html - -
+2023-11-02 15:50:24.057 +01:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2023-11-02 15:50:24.059 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.168 +01:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-11-02 15:50:24.412 +01:00 [DBG] Connection id "0HMURMC5KE1TS" accepted.
+2023-11-02 15:50:24.415 +01:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-11-02 15:50:24.416 +01:00 [DBG] Connection id "0HMURMC5KE1TT" accepted.
+2023-11-02 15:50:24.416 +01:00 [DBG] Connection id "0HMURMC5KE1TS" started.
+2023-11-02 15:50:24.417 +01:00 [DBG] Connection id "0HMURMC5KE1TR" completed keep alive response.
+2023-11-02 15:50:24.417 +01:00 [DBG] Connection id "0HMURMC5KE1TT" started.
+2023-11-02 15:50:24.418 +01:00 [DBG] Connection id "0HMURMC5KE1TU" accepted.
+2023-11-02 15:50:24.420 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui.css - -
+2023-11-02 15:50:24.433 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/index.html - - - 200 - text/html;charset=utf-8 378.5337ms
+2023-11-02 15:50:24.437 +01:00 [DBG] Connection id "0HMURMC5KE1TU" started.
+2023-11-02 15:50:24.435 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui-bundle.js - -
+2023-11-02 15:50:24.438 +01:00 [DBG] Connection id "0HMURMC5KE1TV" accepted.
+2023-11-02 15:50:24.444 +01:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2023-11-02 15:50:24.454 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui-standalone-preset.js - -
+2023-11-02 15:50:24.453 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/_framework/aspnetcore-browser-refresh.js - -
+2023-11-02 15:50:24.455 +01:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2023-11-02 15:50:24.457 +01:00 [DBG] Connection id "0HMURMC5KE1TV" started.
+2023-11-02 15:50:24.457 +01:00 [DBG] Connection id "0HMURMC5KE1U0" accepted.
+2023-11-02 15:50:24.459 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.463 +01:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2023-11-02 15:50:24.467 +01:00 [DBG] Connection id "0HMURMC5KE1TR" completed keep alive response.
+2023-11-02 15:50:24.467 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.469 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/_vs/browserLink - -
+2023-11-02 15:50:24.473 +01:00 [DBG] Connection id "0HMURMC5KE1U0" started.
+2023-11-02 15:50:24.479 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.481 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/_framework/aspnetcore-browser-refresh.js - - - 200 12360 application/javascript;+charset=utf-8 27.2281ms
+2023-11-02 15:50:24.513 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-11-02 15:50:24.513 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-11-02 15:50:24.521 +01:00 [DBG] Connection id "0HMURMC5KE1TS" completed keep alive response.
+2023-11-02 15:50:24.523 +01:00 [DBG] Connection id "0HMURMC5KE1TU" completed keep alive response.
+2023-11-02 15:50:24.529 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui.css - - - 200 144929 text/css 109.2160ms
+2023-11-02 15:50:24.532 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 76.9766ms
+2023-11-02 15:50:24.539 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-11-02 15:50:24.546 +01:00 [DBG] Connection id "0HMURMC5KE1TT" completed keep alive response.
+2023-11-02 15:50:24.549 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 114.7022ms
+2023-11-02 15:50:24.550 +01:00 [DBG] Connection id "0HMURMC5KE1TV" completed keep alive response.
+2023-11-02 15:50:24.552 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.3375ms
+2023-11-02 15:50:24.735 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/v1/swagger.json - -
+2023-11-02 15:50:24.736 +01:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2023-11-02 15:50:24.738 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.760 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/favicon-32x32.png - -
+2023-11-02 15:50:24.761 +01:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2023-11-02 15:50:24.762 +01:00 [DBG] Request did not match any endpoints
+2023-11-02 15:50:24.764 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-11-02 15:50:24.766 +01:00 [DBG] Connection id "0HMURMC5KE1TV" completed keep alive response.
+2023-11-02 15:50:24.768 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/favicon-32x32.png - - - 200 628 image/png 7.8515ms
+2023-11-02 15:50:24.846 +01:00 [DBG] Connection id "0HMURMC5KE1TT" completed keep alive response.
+2023-11-02 15:50:24.848 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 113.2576ms
+2023-11-02 15:50:30.342 +01:00 [DBG] Connect: guest@localhost:5672/
+2023-11-02 15:50:31.092 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/api/Vehicle - -
+2023-11-02 15:50:31.097 +01:00 [DBG] 1 candidate(s) found for the request path '/api/Vehicle'
+2023-11-02 15:50:31.101 +01:00 [DBG] Endpoint 'ScaniaTest.Vehicles.Controllers.VehicleController.GetAll (ScaniaTest.Api)' with route pattern 'api/Vehicle' is valid for the request path '/api/Vehicle'
+2023-11-02 15:50:31.103 +01:00 [DBG] Request matched endpoint 'ScaniaTest.Vehicles.Controllers.VehicleController.GetAll (ScaniaTest.Api)'
+2023-11-02 15:50:31.104 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2023-11-02 15:50:31.110 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-11-02 15:50:31.206 +01:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2023-11-02 15:50:31.210 +01:00 [INF] Executing endpoint 'ScaniaTest.Vehicles.Controllers.VehicleController.GetAll (ScaniaTest.Api)'
+2023-11-02 15:50:31.232 +01:00 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ScaniaTest.Vehicles.Dtos.VehicleDto]]] GetAll() on controller ScaniaTest.Vehicles.Controllers.VehicleController (ScaniaTest.Api).
+2023-11-02 15:50:31.238 +01:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-11-02 15:50:31.241 +01:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-11-02 15:50:31.242 +01:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-11-02 15:50:31.244 +01:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-11-02 15:50:31.245 +01:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-11-02 15:50:31.249 +01:00 [DBG] Executing controller factory for controller ScaniaTest.Vehicles.Controllers.VehicleController (ScaniaTest.Api)
+2023-11-02 15:50:31.423 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-11-02 15:50:31.891 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-11-02 15:50:32.063 +01:00 [DBG] Entity Framework Core 7.0.13 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.13' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-11-02 15:50:32.084 +01:00 [DBG] Creating DbConnection.
+2023-11-02 15:50:32.093 +01:00 [DBG] Created DbConnection. (8ms).
+2023-11-02 15:50:32.096 +01:00 [DBG] Opening connection to database 'main' on server '../VehicleDb.db'.
+2023-11-02 15:50:32.115 +01:00 [DBG] Opened connection to database 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.120 +01:00 [DBG] Disposing connection to database 'main' on server '../VehicleDb.db'.
+2023-11-02 15:50:32.126 +01:00 [DBG] Disposed connection to database 'main' on server '../VehicleDb.db' (2ms).
+2023-11-02 15:50:32.131 +01:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-11-02 15:50:32.132 +01:00 [DBG] Creating DbConnection.
+2023-11-02 15:50:32.133 +01:00 [DBG] Created DbConnection. (0ms).
+2023-11-02 15:50:32.140 +01:00 [DBG] Created DbCommand for 'ExecuteScalar' (6ms).
+2023-11-02 15:50:32.143 +01:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (11ms).
+2023-11-02 15:50:32.144 +01:00 [DBG] Opening connection to database 'main' on server '../VehicleDb.db'.
+2023-11-02 15:50:32.148 +01:00 [DBG] Opened connection to database 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.156 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-02 15:50:32.175 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-11-02 15:50:32.179 +01:00 [DBG] Closing connection to database 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.182 +01:00 [DBG] Closed connection to database 'main' on server '../VehicleDb.db' (2ms).
+2023-11-02 15:50:32.185 +01:00 [DBG] Executed controller factory for controller ScaniaTest.Vehicles.Controllers.VehicleController (ScaniaTest.Api)
+2023-11-02 15:50:32.222 +01:00 [DBG] Compiling query expression: 
+'DbSet<Vehicle>()
+    .Include(i => i.Customer)'
+2023-11-02 15:50:32.309 +01:00 [DBG] Including navigation: 'Vehicle.Customer'.
+2023-11-02 15:50:32.437 +01:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Vehicle>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Vehicle.Id (string) Required PK AfterSave:Throw, 0], [Property: Vehicle.CustomerId (int) Required FK Index, 1], [Property: Vehicle.RegNr (string) Required, 2], [Property: Vehicle.Status (bool) Required, 3] }
+            1 -> Dictionary<IProperty, int> { [Property: Customer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 4], [Property: Customer.Address (string) Required, 5], [Property: Customer.Name (string) Required, 6] }
+        SELECT v.Id, v.CustomerId, v.RegNr, v.Status, c.Id, c.Address, c.Name
+        FROM Vehicles AS v
+        INNER JOIN Customers AS c ON v.CustomerId == c.Id), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Vehicle>, 
+    ScaniaTest.Common.Data.DataContext, 
+    False, 
+    True, 
+    True
+)'
+2023-11-02 15:50:32.461 +01:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-11-02 15:50:32.462 +01:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2023-11-02 15:50:32.463 +01:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2023-11-02 15:50:32.466 +01:00 [DBG] Opening connection to database 'main' on server '../VehicleDb.db'.
+2023-11-02 15:50:32.468 +01:00 [DBG] Opened connection to database 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.470 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."CustomerId", "v"."RegNr", "v"."Status", "c"."Id", "c"."Address", "c"."Name"
+FROM "Vehicles" AS "v"
+INNER JOIN "Customers" AS "c" ON "v"."CustomerId" = "c"."Id"
+2023-11-02 15:50:32.473 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "v"."Id", "v"."CustomerId", "v"."RegNr", "v"."Status", "c"."Id", "c"."Address", "c"."Name"
+FROM "Vehicles" AS "v"
+INNER JOIN "Customers" AS "c" ON "v"."CustomerId" = "c"."Id"
+2023-11-02 15:50:32.492 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: VLUR4X20009048066}'.
+2023-11-02 15:50:32.518 +01:00 [DBG] The navigation 'Vehicle.Customer' for entity with key '{Id: VLUR4X20009048066}' was detected as changed.
+2023-11-02 15:50:32.526 +01:00 [DBG] Context 'DataContext' started tracking 'Customer' entity with key '{Id: 1}'.
+2023-11-02 15:50:32.532 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: VLUR4X20009093588}'.
+2023-11-02 15:50:32.533 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: YS2R4X20005387055}'.
+2023-11-02 15:50:32.535 +01:00 [DBG] The navigation 'Vehicle.Customer' for entity with key '{Id: YS2R4X20005387055}' was detected as changed.
+2023-11-02 15:50:32.536 +01:00 [DBG] Context 'DataContext' started tracking 'Customer' entity with key '{Id: 3}'.
+2023-11-02 15:50:32.538 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: YS2R4X20005387765}'.
+2023-11-02 15:50:32.539 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: YS2R4X20005387949}'.
+2023-11-02 15:50:32.541 +01:00 [DBG] The navigation 'Vehicle.Customer' for entity with key '{Id: YS2R4X20005387949}' was detected as changed.
+2023-11-02 15:50:32.542 +01:00 [DBG] Context 'DataContext' started tracking 'Customer' entity with key '{Id: 2}'.
+2023-11-02 15:50:32.543 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: YS2R4X20005388011}'.
+2023-11-02 15:50:32.544 +01:00 [DBG] Context 'DataContext' started tracking 'Vehicle' entity with key '{Id: YS2R4X20005399401}'.
+2023-11-02 15:50:32.548 +01:00 [DBG] Closing data reader to 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.550 +01:00 [DBG] A data reader for 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db' is being disposed after spending 74ms reading results.
+2023-11-02 15:50:32.553 +01:00 [DBG] Closing connection to database 'main' on server 'C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\VehicleDb.db'.
+2023-11-02 15:50:32.555 +01:00 [DBG] Closed connection to database 'main' on server '../VehicleDb.db' (1ms).
+2023-11-02 15:50:32.559 +01:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-11-02 15:50:32.563 +01:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2023-11-02 15:50:32.565 +01:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2023-11-02 15:50:32.566 +01:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2023-11-02 15:50:32.567 +01:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2023-11-02 15:50:32.568 +01:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-11-02 15:50:32.569 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[ScaniaTest.Common.Entities.Vehicle, ScaniaTest.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ScaniaTest.Vehicles.Dtos.VehicleDto, ScaniaTest.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-11-02 15:50:32.683 +01:00 [INF] Executed action ScaniaTest.Vehicles.Controllers.VehicleController.GetAll (ScaniaTest.Api) in 1433.8119ms
+2023-11-02 15:50:32.685 +01:00 [INF] Executed endpoint 'ScaniaTest.Vehicles.Controllers.VehicleController.GetAll (ScaniaTest.Api)'
+2023-11-02 15:50:32.688 +01:00 [INF] Request: GET /api/Vehicle 
+Request Body:  
+Elapsed Time: 1581ms
+Client Ip Address: ::1
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.76
+2023-11-02 15:50:32.689 +01:00 [DBG] Connection id "0HMURMC5KE1TT" completed keep alive response.
+2023-11-02 15:50:32.692 +01:00 [DBG] 'DataContext' disposed.
+2023-11-02 15:50:32.695 +01:00 [DBG] Disposing connection to database 'main' on server '../VehicleDb.db'.
+2023-11-02 15:50:32.696 +01:00 [DBG] Disposed connection to database 'main' on server '../VehicleDb.db' (1ms).
+2023-11-02 15:50:32.698 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/api/Vehicle - - - 200 694 application/json;+charset=utf-8 1606.2104ms
+2023-11-02 15:50:34.421 +01:00 [WRN] Connection Failed: "rabbitmq://localhost/"
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.Impl.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IList`1 hostnames, String clientProvidedName)
+   at MassTransit.RabbitMqTransport.ConnectionContextFactory.CreateConnection(ISupervisor supervisor) in /_/src/Transports/MassTransit.RabbitMqTransport/RabbitMqTransport/ConnectionContextFactory.cs:line 86

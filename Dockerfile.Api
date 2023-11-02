@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+# Use the official ASP.NET Core SDK as a parent image to build the app
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+COPY ["ScaniaTest.Api/ScaniaTest.Api.csproj", "ScaniaTest.Api/"]
+COPY ["ScaniaTest.Common/ScaniaTest.Common.csproj", "ScaniaTest.Common/"]
+RUN dotnet restore "ScaniaTest.Api/ScaniaTest.Api.csproj"
+COPY . .
+WORKDIR "/src/ScaniaTest.Api"
+RUN dotnet build "ScaniaTest.Api.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "ScaniaTest.Api.csproj" -c Release -o /app/publish
+
+# Build the runtime image
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "ScaniaTest.Api.dll"]
