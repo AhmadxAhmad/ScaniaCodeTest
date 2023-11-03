@@ -13,6 +13,8 @@ services:
     ports:
       - "7243:80"
       - "5037:443"
+    environment:
+      - ASPNETCORE_URLS=http://*:80
   scaniatestcustomers:
     build:
       context: .
@@ -20,6 +22,8 @@ services:
     ports:
       - "7185:80"
       - "5125:443"
+    environment:
+      - ASPNETCORE_URLS=http://*:80
   scaniatestsimulator:
     build:
       context: .
@@ -27,6 +31,8 @@ services:
     ports:
       - "7062:80"
       - "5170:443"
+    environment:
+      - ASPNETCORE_URLS=http://*:80
   rabbitmq:
     image: rabbitmq:management
     container_name: rabbitmq
