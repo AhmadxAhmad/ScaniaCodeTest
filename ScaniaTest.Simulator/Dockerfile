@@ -1,9 +1,10 @@
+#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-# Use the official ASP.NET Core SDK as a parent image to build the app
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["ScaniaTest.Simulator/ScaniaTest.Simulator.csproj", "ScaniaTest.Simulator/"]
@@ -14,11 +15,9 @@ WORKDIR "/src/ScaniaTest.Simulator"
 RUN dotnet build "ScaniaTest.Simulator.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ScaniaTest.Simulator.csproj" -c Release -o /app/publish
+RUN dotnet publish "ScaniaTest.Simulator.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-# Build the runtime image
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ScaniaTest.Simulator.dll"]
-ENV ASPNETCORE_URLS http://*:80

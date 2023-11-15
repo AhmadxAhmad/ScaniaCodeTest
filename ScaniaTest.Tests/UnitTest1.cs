@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
 using Moq;
+using ScaniaTest.Common.Data;
 using ScaniaTest.Common.Entities;
 using ScaniaTest.Common.Repositories;
-using ScaniaTest.Vehicles.Controllers;
 using ScaniaTest.Vehicles.Dtos;
 using ScaniaTest.Vehicles.Services;
 
@@ -15,7 +14,7 @@ namespace ScaniaTest.Tests
         [TestMethod]
         public async Task DataFromService()
         {
-            var mockRepository = new Mock<IRepository<Vehicle>>();
+            var mockRepository = new Mock<IRepository<DataContext,Vehicle>>();
             mockRepository.Setup(r => r.GetAllByAsync(x=>x.CustomerId==3))
                 .ReturnsAsync(new List<Vehicle>());
 

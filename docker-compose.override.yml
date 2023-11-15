@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  scaniatest.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  scaniatest.customers:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  scaniatest.simulator:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+

@@ -12,7 +12,6 @@ export class VehicleService {
     this.apiUri=environment.Vehicle.api.url+'Vehicle';
   }
 
-
   async getVehicles(): Promise<any> {
     try {
       const response = await this._httpClient.get<any>(this.apiUri).toPromise();
@@ -27,7 +26,6 @@ export class VehicleService {
       const response = await this._httpClient.get<any>(this.apiUri+"/ByStatus/"+status).toPromise();
       return response;
     } catch (error) {
-
       return null;
     }
   }
@@ -37,7 +35,6 @@ export class VehicleService {
       const response = await this._httpClient.get<any>(this.apiUri+"/ByCustomer/"+id).toPromise();
       return response;
     } catch (error) {
-
       console.error('Error fetching vehicles:', error);
       return null;
     }

@@ -1,38 +1,48 @@
-version: '3.9'
+version: '3.4'
 
 services:
-  frontend:
-    build:
-      context: ./ScaniaTest.Frontend
-    ports:
-      - "4200:80"
-  scaniatestapi:
+
+  scaniatest.api:
+    image: ${DOCKER_REGISTRY-}scaniatestapi
     build:
       context: .
-      dockerfile: Dockerfile.Api
+      dockerfile: ScaniaTest.Api/Dockerfile
     ports:
-      - "7243:80"
-      - "5037:443"
-    environment:
-      - ASPNETCORE_URLS=http://*:80
-  scaniatestcustomers:
+         - 7001:80
+    volumes:
+      - databasetest:/database
+      - logs:/serviceslogs
+    networks:
+        - mynetwork1
+
+  scaniatest.customers:
+    image: ${DOCKER_REGISTRY-}scaniatestcustomers
     build:
       context: .
-      dockerfile: Dockerfile.Customers
+      dockerfile: ScaniaTest.Customers/Dockerfile
     ports:
-      - "7185:80"
-      - "5125:443"
-    environment:
-      - ASPNETCORE_URLS=http://*:80
-  scaniatestsimulator:
+         - 7002:80
+    volumes:
+      - databasetest:/database
+      - logs:/serviceslogs
+    networks:
+        - mynetwork1
+
+  scaniatest.simulator:
+    image: ${DOCKER_REGISTRY-}scaniatestsimulator
     build:
       context: .
-      dockerfile: Dockerfile.Simulator
+      dockerfile: ScaniaTest.Simulator/Dockerfile
     ports:
-      - "7062:80"
-      - "5170:443"
-    environment:
-      - ASPNETCORE_URLS=http://*:80
+         - 7003:80
+    volumes:
+      - databasetest:/database
+      - logs:/serviceslogs
+    networks:
+       - mynetwork1
+
+# rabbitmq
+
   rabbitmq:
     image: rabbitmq:management
     container_name: rabbitmq
@@ -41,6 +51,30 @@ services:
       - 15672:15672
     volumes:
       - rabbitmqdata:/var/lib/rabbitmq
+    networks:
+        mynetwork1:
+            ipv4_address: 192.168.1.10
+
+
+# frontend
+  frontend:
+        build:
+            context: ./ScaniaTest.Frontend
+        container_name: angular
+        ports:
+            - 4200:80
+        networks:
+            - mynetwork1
 
 volumes:
   rabbitmqdata:
+  databasetest:
+  logs:
+
+networks:
+  mynetwork1:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24

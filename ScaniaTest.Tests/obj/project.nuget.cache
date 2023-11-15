@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fDA5AfaNQLwQ1RuaMLTF2sWCh57wJBJAW7Ntl2YTB83hrdGVa6KWpTR1/J8xt/uBI0WS7jBZDCRwuI8TueMumQ==",
+  "dgSpecHash": "hNL1TDK7eIgyTW8bh8733uJV/vI5Tz+hjgHL0hy+DZ8NeZVBgzj0/OCZJ0ACw1+oNsXF0+/+R+w7O83Dyco5OQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\a.ahmad\\source\\repos\\Scania\\ScaniaTest\\ScaniaTest.Tests\\ScaniaTest.Tests.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.7.1\\microsoft.testplatform.objectmodel.17.7.1.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.testplatform.testhost\\17.7.1\\microsoft.testplatform.testhost.17.7.1.nupkg.sha512",
+    "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\moq\\4.20.69\\moq.4.20.69.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\mstest.testadapter\\2.2.10\\mstest.testadapter.2.2.10.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\mstest.testframework\\2.2.10\\mstest.testframework.2.2.10.nupkg.sha512",

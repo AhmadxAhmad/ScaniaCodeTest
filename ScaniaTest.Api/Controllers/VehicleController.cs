@@ -1,4 +1,3 @@
-
 using Microsoft.AspNetCore.Mvc;
 using ScaniaTest.Vehicles.Dtos;
 using ScaniaTest.Vehicles.Services;
@@ -15,7 +14,6 @@ namespace ScaniaTest.Vehicles.Controllers
         {
             _vehicleService = vehicleService;
         }
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<VehicleDto>>> GetAll()
         {

@@ -19,13 +19,12 @@ constructor(private _vehicleService:VehicleService,
 {
   
 }
-  async ngOnInit(){
-    
+ 
+async ngOnInit(){
    await this.GetAll();
-
 }
 
-  async randomize(){
+async randomize(){
   await this._simulatorService.update()
   await this.GetAll();
 }

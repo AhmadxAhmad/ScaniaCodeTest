@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qv/7zoQV0bjm5unPGxPEDA5dl8ZqQ9AQBNbgEPoSeolsPfIKYsyVXm7aCA6YfBxhwVChflhv890hHMD55+awPQ==",
+  "dgSpecHash": "aKujMyUGy1Y1hfvbJbN3AzSTN2OhVNw1v8nEl7tK6LD4K5QUSGzlr/aamYKeUKntIt5R6Urmcaoit7B+MW7Blg==",
   "success": true,
   "projectFilePath": "C:\\Users\\a.ahmad\\source\\repos\\Scania\\ScaniaTest\\ScaniaTest.Api\\ScaniaTest.Api.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.15.1\\microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.1\\microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\a.ahmad\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\a.ahmad\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",

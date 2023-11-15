@@ -40,14 +40,14 @@ namespace ScaniaTest.Common.Security
         }
 
         private JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions,
-            SigningCredentials signingCredentials, IEnumerable<Claim> claim)
+            SigningCredentials signingCredentials, IEnumerable<Claim> claims)
         {
             var jwt = new JwtSecurityToken(
                 issuer: tokenOptions.Issuer,
                 audience: tokenOptions.Audience,
                 expires: _accessTokenExpiration,
                 notBefore: DateTime.Now,
-                claims: claim,
+                claims: claims,
                 signingCredentials: signingCredentials
             );
             return jwt;
@@ -83,9 +83,7 @@ namespace ScaniaTest.Common.Security
 
             var claims = _httpContextAccessor.HttpContext.User.Claims;
 
-            var result = claims
-                .Select(c => new Claim(c.Type, c.Value))
-                .ToList();
+            var result = claims.ToList();
 
             return result;
 

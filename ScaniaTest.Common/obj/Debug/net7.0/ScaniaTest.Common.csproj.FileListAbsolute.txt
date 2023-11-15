@@ -10,3 +10,15 @@ C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\ScaniaTest.Common\obj\Debug\net7
 C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\ScaniaTest.Common\obj\Debug\net7.0\refint\ScaniaTest.Common.dll
 C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.pdb
 C:\Users\a.ahmad\source\repos\Scania\ScaniaTest\ScaniaTest.Common\obj\Debug\net7.0\ref\ScaniaTest.Common.dll
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\bin\Debug\net7.0\ScaniaTest.Common.deps.json
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\bin\Debug\net7.0\ScaniaTest.Common.dll
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\bin\Debug\net7.0\ScaniaTest.Common.pdb
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.csproj.AssemblyReference.cache
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.AssemblyInfoInputs.cache
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.AssemblyInfo.cs
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.csproj.CoreCompileInputs.cache
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.dll
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\refint\ScaniaTest.Common.dll
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ScaniaTest.Common.pdb
+C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Common\obj\Debug\net7.0\ref\ScaniaTest.Common.dll

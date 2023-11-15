@@ -7,19 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Api", "ScaniaTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Common", "ScaniaTest.Common\ScaniaTest.Common.csproj", "{FE52A107-64D6-4527-A7D8-3274F266A54D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScaniaTest.Infra", "ScaniaTest.Infra", "{E325BB8B-7840-4C66-885E-10820CDD198D}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-		Dockerfile.Api = Dockerfile.Api
-		Dockerfile.Customers = Dockerfile.Customers
-		Dockerfile.Simulator = Dockerfile.Simulator
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Customers", "ScaniaTest.Customers\ScaniaTest.Customers.csproj", "{088971AE-9A94-447E-B257-29794A23F935}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Simulator", "ScaniaTest.Simulator\ScaniaTest.Simulator.csproj", "{1D27877C-A98A-4268-80BB-9885300FB568}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScaniaTest.Tests", "ScaniaTest.Tests\ScaniaTest.Tests.csproj", "{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{55023772-E159-490A-B17E-7F78AC8BFE24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +41,10 @@ Global
 		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C118DA8D-B7BC-4BFF-B5C8-3426E325E41A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55023772-E159-490A-B17E-7F78AC8BFE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55023772-E159-490A-B17E-7F78AC8BFE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55023772-E159-490A-B17E-7F78AC8BFE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55023772-E159-490A-B17E-7F78AC8BFE24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

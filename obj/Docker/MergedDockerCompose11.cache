@@ -1,0 +1,118 @@
+name: dockercompose9038331104798108671
+services:
+  frontend:
+    build:
+      context: C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main\ScaniaTest.Frontend
+      dockerfile: Dockerfile
+    container_name: angular
+    networks:
+      mynetwork1: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "4200"
+        protocol: tcp
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:management
+    networks:
+      mynetwork1:
+        ipv4_address: 192.168.1.10
+    ports:
+      - mode: ingress
+        target: 5672
+        published: "5672"
+        protocol: tcp
+      - mode: ingress
+        target: 15672
+        published: "15672"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: rabbitmqdata
+        target: /var/lib/rabbitmq
+        volume: {}
+  scaniatest.api:
+    build:
+      context: C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main
+      dockerfile: ScaniaTest.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: scaniatestapi
+    networks:
+      mynetwork1: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "7001"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: databasetest
+        target: /database
+        volume: {}
+      - type: volume
+        source: logs
+        target: /serviceslogs
+        volume: {}
+  scaniatest.customers:
+    build:
+      context: C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main
+      dockerfile: ScaniaTest.Customers/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: scaniatestcustomers
+    networks:
+      mynetwork1: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "7002"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: databasetest
+        target: /database
+        volume: {}
+      - type: volume
+        source: logs
+        target: /serviceslogs
+        volume: {}
+  scaniatest.simulator:
+    build:
+      context: C:\Users\a.ahmad\Downloads\ScaniaCodeTest-main\ScaniaCodeTest-main
+      dockerfile: ScaniaTest.Simulator/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: scaniatestsimulator
+    networks:
+      mynetwork1: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "7003"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: databasetest
+        target: /database
+        volume: {}
+      - type: volume
+        source: logs
+        target: /serviceslogs
+        volume: {}
+networks:
+  mynetwork1:
+    name: dockercompose9038331104798108671_mynetwork1
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24
+volumes:
+  databasetest:
+    name: dockercompose9038331104798108671_databasetest
+  logs:
+    name: dockercompose9038331104798108671_logs
+  rabbitmqdata:
+    name: dockercompose9038331104798108671_rabbitmqdata
